@@ -6,7 +6,7 @@ baseurl="http://www.courtesyparts.com/images/s13/s13_"
 
 regionfail = False
 while regionfail == False:
-    for region in range(200,300):
+    for region in range(0,1000):
 	subfail = False
 	subimage = 1
 	while subfail == False:
@@ -22,7 +22,7 @@ while regionfail == False:
 			print "DIFFERENT ERROR " + e.code
 	    else:
 		data = resp.read()
-		f = open(str(region) + "-" + str(subimage) + ".gif", "a")
+		f = open(str(region) + "-" + str(subimage) + ".gif", "w")
 		f.write(data)
 		f.close
 		subimage += 1
